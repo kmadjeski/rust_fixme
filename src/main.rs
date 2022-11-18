@@ -21,12 +21,19 @@ impl Display for City {
                self.name, self.lat.abs(), lat_c, self.lon.abs(), lon_c)
     }
 }
-
-#[derive(Debug)]
+/// Take derive(Debug out) and create an impliment of the printout
+//#[derive(Debug)]
 struct Color {
     red: u8,
     green: u8,
     blue: u8,
+}
+
+impl Display for Color {
+    fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+        write!(f, "red:{}, green:{}, blue:{}",self.red,self.green,self.blue)
+    }
+    
 }
 
 fn main() {
@@ -44,6 +51,6 @@ fn main() {
         Color { red: 0, green: 0, blue: 0 },
     ].iter() {
         // Hint : Fix the code so you can print it using {}
-        println!("{:?}", *color);
+        println!("{}", *color);
     }
 }
