@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["main",""]],"struct":[["City",""],["Color","Take derive(Debug out) and create an impliment of the printout"]]};
